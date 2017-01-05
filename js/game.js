@@ -4,6 +4,11 @@ function reactionGame() {
     var target = document.getElementById('target');
     target.style.display = 'block';
 
+    // Random numbers generator
+    function randgen(num) {
+        return Math.floor((Math.random()*num));
+    }
+
     // Shape
     shape = Math.floor(Math.random()*2);
     if (shape === 0) {
@@ -18,14 +23,14 @@ function reactionGame() {
     target.style.width = size + 'px';
 
     // Color
-    red = Math.floor((Math.random()*255));
-    green = Math.floor((Math.random()*255));
-    blue = Math.floor((Math.random()*255));
+    red = randgen(255);
+    green = randgen(255);
+    blue = randgen(255);
     target.style.backgroundColor = 'rgb(' + red + ', ' + green + ', ' + blue + ')';
 
     // position
-    randX = Math.floor((Math.random()*1000));
-    randY = Math.floor((Math.random()*600));
+    randX = randgen(1000);
+    randY = randgen(600);
 
     if (randX > size && randY > size) {
         x = randX - size;
@@ -58,7 +63,7 @@ function reactionGame() {
 
     }, 1);
 
-    timeDelay = Math.floor(Math.random() * 2000);
+    timeDelay = randgen(2000);
 
     document.getElementById('target').onclick = function () {
         window.clearInterval(myVar);
