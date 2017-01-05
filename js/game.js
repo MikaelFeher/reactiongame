@@ -1,5 +1,6 @@
 function reactionGame() {
-    var shape, size, red, green, blue, x, y, randX, randY, start, myVar, time, e, elapsed;
+    var shape, size, red, green, blue, x, y, randX, randY, start, myVar, time, e, elapsed, timeDelay;
+    
     var target = document.getElementById('target');
 
     // Shape
@@ -56,10 +57,12 @@ function reactionGame() {
 
     }, 1);
 
+    timeDelay = Math.floor(Math.random() * 250);
+
     document.getElementById('target').onclick = function () {
         window.clearInterval(myVar);
         document.getElementById('result').textContent = elapsed + 's';
-        reactionGame();
+        setTimeout(reactionGame, timeDelay);
     };
 
     // Stop the game - Button
