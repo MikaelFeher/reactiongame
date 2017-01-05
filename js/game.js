@@ -1,3 +1,5 @@
+setTimeout(reactionGame, 2000);
+
 function reactionGame() {
     var shape, size, red, green, blue, x, y, randX, randY, start, myVar, time, e, elapsed, timeDelay;
 
