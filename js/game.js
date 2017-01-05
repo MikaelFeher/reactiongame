@@ -2,6 +2,7 @@ function reactionGame() {
     var shape, size, red, green, blue, x, y, randX, randY, start, myVar, time, e, elapsed, timeDelay;
 
     var target = document.getElementById('target');
+    target.style.display = 'block';
 
     // Shape
     shape = Math.floor(Math.random()*2);
@@ -51,17 +52,18 @@ function reactionGame() {
         e = time / 1000;
         elapsed = e.toFixed(3);
 
-        document.getElementById('timer').innerHTML = elapsed + 's';
+        // document.getElementById('timer').innerHTML = elapsed + 's';
 
         console.log(elapsed);  // For testing...
 
     }, 1);
 
-    timeDelay = Math.floor(Math.random() * 250);
+    timeDelay = Math.floor(Math.random() * 2000);
 
     document.getElementById('target').onclick = function () {
         window.clearInterval(myVar);
         document.getElementById('result').innerHTML = elapsed + 's';
+        target.style.display = 'none';
         setTimeout(reactionGame, timeDelay);
     };
 

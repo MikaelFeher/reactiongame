@@ -26,9 +26,8 @@ body {
 #target {
     width: 150px;
     height: 150px;
-    background: blue;
     position: relative;
-    /*top: 450px;*/
+    display:block;
 }
 .circle {
     border-radius: 50%;
