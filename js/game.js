@@ -1,6 +1,6 @@
 function reactionGame() {
     var shape, size, red, green, blue, x, y, randX, randY, start, myVar, time, e, elapsed, timeDelay;
-    
+
     var target = document.getElementById('target');
 
     // Shape
@@ -48,10 +48,10 @@ function reactionGame() {
     myVar = window.setInterval(function() {
         time = new Date().getTime() - start;
 
-        e = ((time / 100) / 10);
+        e = time / 1000;
         elapsed = e.toFixed(3);
 
-        document.getElementById('timer').textContent = elapsed + 's';
+        document.getElementById('timer').innerHTML = elapsed + 's';
 
         console.log(elapsed);  // For testing...
 
@@ -61,7 +61,7 @@ function reactionGame() {
 
     document.getElementById('target').onclick = function () {
         window.clearInterval(myVar);
-        document.getElementById('result').textContent = elapsed + 's';
+        document.getElementById('result').innerHTML = elapsed + 's';
         setTimeout(reactionGame, timeDelay);
     };
 
