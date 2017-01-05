@@ -1,0 +1,35 @@
+* {
+    font-family: 'Ubuntu', 'Open Sans';
+}
+body {
+    background-color: #E4E4E4;
+}
+#container {
+    width: 1000px;
+    margin: 0 auto;
+}
+#text-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+#stop {
+    width: 75px;
+    height: 30px;
+}
+#gameField {
+    height: 600px;
+    width: 1000px;
+    margin:0;
+    padding: 0;
+    background: white;
+}
+#target {
+    width: 150px;
+    height: 150px;
+    background: blue;
+    position: relative;
+    /*top: 450px;*/
+}
+.circle {
+    border-radius: 50%;
+}
